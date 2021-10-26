@@ -7,7 +7,7 @@ De plus, nous allons considerer que nous stockerons des entier. Nous pouvons bie
 Avant de commencer, nous allons vous rappeler rapidement le vocabulaire lié aux arbres : 
 
 
-![Source : Arbres binaires Irena Rusu](C:\Users\billa\Documents\Programmation\Java\Perso\SD_Arbre\Terminologie Arbre.png "Terminologie des Arbres")
+![Source : Arbres binaires Irena Rusu](Terminologie Arbre.png "Terminologie des Arbres")
 
 ## Classe Tree :
 

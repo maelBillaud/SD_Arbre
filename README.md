@@ -6,9 +6,9 @@ De plus, nous allons considerer que nous stockerons des entier. Nous pouvons bie
 
 Avant de commencer, nous allons vous rappeler rapidement le vocabulaire lié aux arbres : 
 
-<p align="center">
+
 ![Source : Arbres binaires Irena Rusu](C:\Users\billa\Documents\Programmation\Java\Perso\SD_Arbre\Terminologie Arbre.png "Terminologie des Arbres")
-</p>
+
 ## Classe Tree :
 
 la classe Tree est donc représentée par chainage. 

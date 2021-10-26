@@ -21,4 +21,3 @@ Lorsqu'on met à la suite des **Node** et des **Branch**, on obtient un arbre. L
 
 ![Source : Arbres binaires Irena Rusu](Schema_SD.png "Schéma représentant la SD Arbre")
 
-test

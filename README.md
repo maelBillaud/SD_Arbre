@@ -21,6 +21,8 @@ Lorsqu'on met à la suite des **Node** et des **Branch**, on obtient un arbre. L
 
 ![Source : Arbres binaires Irena Rusu](Schema_SD_Arbre.png "Schéma représentant la SD Arbre")
 
+### Exemple de représentation d'arbre n-aire : 
 
+![Source : Arbres binaires Irena Rusu](Representation_arbre_n-aire.png "Exemple d'arbre n-aire et de sa représentation sous forme de chainage")
 ///Projet pas encore terminé///
 

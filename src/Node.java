@@ -19,6 +19,17 @@ public class Node
 
     public Node() {}
 
+    //Getters and Setters
+
+    public int getValue() {
+        return value;
+    }
+
+    public Branch getNext() {
+        return next;
+    }
+
+
     //Methods
 
     /*

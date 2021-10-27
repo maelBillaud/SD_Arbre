@@ -9,9 +9,30 @@
 public class Tree
 {
     //Attributes
-
+    private Node root;
 
     //Constructor
+    public Tree(Node root)
+    {
+        this.root = root;
+    }
+
+    public Tree() {}
 
     //Methods
+    public void addBranch(int value) //Ajoute une branche au niveau du noeud qui contient la valeur value
+    {
+        Node temp = root;
+        boolean valueIn = false;
+        if (temp.getNext() != null)
+        {
+
+        }
+    }
+
+
+    public void addNode(Node node)
+    {
+
+    }
 }

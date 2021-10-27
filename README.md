@@ -11,13 +11,16 @@ Avant de commencer, nous allons vous rappeler rapidement le vocabulaire lié aux
 
 ## Classe Tree :
 
-la classe Tree est donc représentée par chainage. 
+La classe Tree est donc représentée par chainage. 
 
-Elle contient un attribut qui est un pointeur vers la racine et à besoin deux deux autres classes pour fonctionner correctement : 
+Elle contient un attribut qui correspond à la racine et à besoin deux deux autres classes pour fonctionner correctement : 
 * **Node** qui correspond  à un noeud quelconque de l'arbre (noeud interne ou externe). Elle se compose d'une valeur (int) et d'une **Branch** 
 * **Branch** qui correspond à une branche de l'arbre (lien entre deux noeud). Elle se compose d'un **Node** et d'une **Branche**.
 
 Lorsqu'on met à la suite des **Node** et des **Branch**, on obtient un arbre. Le shéma ci-dessous vous aidera peut être à comprendre.
 
 ![Source : Arbres binaires Irena Rusu](Schema_SD_Arbre.png "Schéma représentant la SD Arbre")
+
+
+///Projet pas encore terminé///
 

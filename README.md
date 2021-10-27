@@ -33,7 +33,7 @@ _addNode_ : Permet d'ajouter un noeud dans l'arbre en fonction de son père
 En effet, faire une fonction pour afficher l'arbre était trop chronophage et peu utile car nous n'utiliserons plus d'arbre n-aires par la suite.
 Cependant nous avons fait un test dans le main en manipulant la fonction _addNode_ et le chainage directement pour s'assurer que notre classe était fonctionnelle.
 
-`//Création de l'arbre vu dans l'exemple ci-dessus
+```//Création de l'arbre vu dans l'exemple ci-dessus
 Tree test = new Tree(1);
 test.addNode(1, 2, test.root);
 test.addNode(1, 3, test.root);
@@ -59,7 +59,8 @@ System.out.println(" " + test.root.next.next.next.node.next.node.value);
 
 //Noeuds de hauteur 3
 System.out.print(test.root.next.node.next.node.next.node.value);
-System.out.print(" " + test.root.next.node.next.node.next.next.node.value);`
+System.out.print(" " + test.root.next.node.next.node.next.next.node.value);
+```
 
 ## Classe Binary_Tree
 

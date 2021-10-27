@@ -31,9 +31,10 @@ _addRoot_ : Permet d'ajouter une valeur au niveau de la racine (sert à initiali
 _addNode_ : Permet d'ajouter un noeud dans l'arbre en fonction de son père 
 
 En effet, faire une fonction pour afficher l'arbre était trop chronophage et peu utile car nous n'utiliserons plus d'arbre n-aires par la suite.
-Cependant nous avons fait un test dans le main en manipulant la fonction _addNode_ et le chainage directement pour s'assurer que notre classe était fonctionnelle.
+Cependant, nous avons fait un test dans le main en manipulant la fonction _addNode_ et le chainage directement pour s'assurer que notre classe était fonctionnelle.
 
-```//Création de l'arbre vu dans l'exemple ci-dessus
+```
+//Création de l'arbre vu dans l'exemple ci-dessus
 Tree test = new Tree(1);
 test.addNode(1, 2, test.root);
 test.addNode(1, 3, test.root);
@@ -64,7 +65,7 @@ System.out.print(" " + test.root.next.node.next.node.next.next.node.value);
 
 ## Classe Binary_Tree
 
-Classe fille de Tree, elle est donc aussi représentée par le chainage décrit ci dessus.
+Classe fille de Tree, elle est donc aussi représentée par le chainage décrit ci-dessus.
 
-C'est cette sous classe là que nous allons réelement developpée car il en découlera les classes des Arbres Binaires de recherche (ABR) et arbres équilibrés en hauteur (AVL).
+C'est cette sous classe là que nous allons réellement développer car il en découlera les classes des Arbres Binaires de recherche (ABR) et arbres équilibrés en hauteur (AVL).
 

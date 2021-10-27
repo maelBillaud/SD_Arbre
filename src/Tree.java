@@ -28,7 +28,7 @@ public class Tree
     }
 
     //Methods
-    public void addRoot(int value)
+    public void addRoot(int value) //Ajoute une valeur à la racine de arbre (/!\ écrase la valeur précédante si il y en à une)
     {
         this.root.value = value;
     }

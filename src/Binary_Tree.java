@@ -22,6 +22,12 @@ public class Binary_Tree extends Tree {
         this.root.next = new Branch(null, new Branch(null, null));
     }
 
+    //Méthodes
+    public void treeToBinTree ()
+    {
+
+    }
+
 
 
 }

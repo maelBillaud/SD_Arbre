@@ -1,8 +1,8 @@
 public class Branch
 {
     //Attributes
-    private Node node;
-    private Branch next;
+    Node node;
+    Branch next;
 
     //Constructor
     public Branch(Node node, Branch next)

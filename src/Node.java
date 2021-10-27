@@ -1,8 +1,8 @@
 public class Node
 {
     //Attributes
-    private int value;
-    private Branch next;
+    int value;
+    Branch next;
 
     //Constructor
     public Node(int value, Branch next)
@@ -19,18 +19,31 @@ public class Node
 
     public Node() {}
 
-    //Getters and Setters
-
-    public int getValue() {
-        return value;
-    }
-
-    public Branch getNext() {
-        return next;
-    }
-
-
     //Methods
+    public boolean addNode(int father, int value) //Ajoute un noeud de valeur value comme un fils du noeud qui à pour valeur father. Retourne vrai si si un fils à été ajouté
+    {
+        Node tempN = this; //Poiteur temporaire sur un noeud
+        Branch tempB; //Pointeur temporaire sur une branche
+
+        if (tempN.value == father)
+        {
+            if (tempN.next == null)
+            {
+                tempN.next = new Branch(new Node(value, null), null);
+            }
+            else
+            {
+                tempB = tempN.next;
+                while(tempB.next != null)
+                {
+                    tempB= tempB.next;
+                }
+                tempB.next = new Branch(new Node(value, null), null);
+            }
+            return true;
+        }
+        return false;
+    }
 
     /*
     public void add(int value) //Adds a value to the Node

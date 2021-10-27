@@ -61,6 +61,7 @@ public class Tree
                     addNode(father, value, tempB.node);
                     tempB = tempB.next;
                 }
+                addNode(father, value, tempB.node);
             }
         }
     }

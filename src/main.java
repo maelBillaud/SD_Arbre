@@ -21,13 +21,12 @@ public class main
 
         System.out.print(test.root.next.node.next.node.value);
         System.out.print(" " + test.root.next.next.node.next.node.value);
-        /*
+
         System.out.println(" " + test.root.next.next.next.node.next.node.value);
 
         System.out.print(test.root.next.node.next.node.next.node.value);
         System.out.print(" " + test.root.next.node.next.node.next.next.node.value);
 
-         */
 
     }
 }

@@ -23,11 +23,42 @@ public class Binary_Tree extends Tree {
     }
 
     //Méthodes
-    public void treeToBinTree ()
+    public static Node copy(Tree X)// -Voir fonction suivante- Crée un noeud de U, copie du noeud pointé par X dans T
     {
-
+        return X.root;
     }
 
+    public void treeToBinTree (Tree T, Tree U)
+    {
+        Node X = T.root;
+        Node Y = U.root;
+        if (X.next != null)
+        {
+            Tree last = new Tree();
+            Branch W = X.next;
+            while(W != null)
+            {
+                courseTreeSons(Y, last, W);
+                W = W.next;
+            }
+            courseTreeSons(Y, last, W);
+        }
+    }
+
+    private void courseTreeSons(Node y, Tree last, Branch w) // -Permet d'éviter les répétitions dans le code- Tri tous les fils du noeud Y pour les mettre sous forme binaire puis fait un appel recursif sur treeToBinTree
+    {
+        if (last == new Tree())
+        {
+            y.left(w.node);
+            last.root = y.left();
+        }
+        else
+        {
+            last.root.right(w.node);
+            last.root = last.root.right();
+        }
+        treeToBinTree(new Tree(w.node), last);
+    }
 
 
 }

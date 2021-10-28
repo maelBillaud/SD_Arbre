@@ -19,16 +19,16 @@ public class Binary_Tree extends Tree {
 
     Binary_Tree()
     {
-        this.root.next = new Branch(null, new Branch(null, null));
+        this.root = null;
     }
 
     //Méthodes
-    public static Node copy(Tree X)// -Voir fonction suivante- Crée un noeud de U, copie du noeud pointé par X dans T
+    public static Node copy(Tree X) //--Voir fonction suivante-- Crée un noeud de U, copie du noeud pointé par X dans T
     {
         return X.root;
     }
 
-    public void treeToBinTree (Tree T, Tree U)
+    public void treeToBinTree (Tree T, Tree U) //Stocke la transformation binaire de T dans U
     {
         Node X = T.root;
         Node Y = U.root;
@@ -45,19 +45,19 @@ public class Binary_Tree extends Tree {
         }
     }
 
-    private void courseTreeSons(Node y, Tree last, Branch w) // -Permet d'éviter les répétitions dans le code- Tri tous les fils du noeud Y pour les mettre sous forme binaire puis fait un appel recursif sur treeToBinTree
+    private void courseTreeSons(Node Y, Tree last, Branch W) // --Permet d'éviter les répétitions dans le code-- Tri tous les fils du noeud Y pour les mettre sous forme binaire puis fait un appel recursif sur treeToBinTree
     {
         if (last == new Tree())
         {
-            y.left(w.node);
-            last.root = y.left();
+            Y.left(W.node);
+            last.root = Y.left();
         }
         else
         {
-            last.root.right(w.node);
+            last.root.right(W.node);
             last.root = last.root.right();
         }
-        treeToBinTree(new Tree(w.node), last);
+        treeToBinTree(new Tree(W.node), last);
     }
 
 

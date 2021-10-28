@@ -24,19 +24,21 @@ public class Tree
 
     public Tree()
     {
-        this.root.next = null;
+        this.root = null;
     }
 
     //Methods
     public void addRoot(int value) //Ajoute une valeur à la racine de arbre (/!\ écrase la valeur précédante si il y en à une)
     {
-        this.root.value = value;
+        this.root = new Node(value, null);
     }
 
     public void addNode(int father, int value, Node node) //Ajoute un noeud de valeur value comme un fils du noeud qui à pour valeur father ///Faire l'appel dans main avec node = root///
     {
         Node tempN = node; //Poiteur temporaire sur un noeud
         Branch tempB = node.next; // Pointeur temporaire sur une branche
+
+        //Cas ou on à un arbre vide
 
         if (tempN.value == father)
         {
@@ -66,12 +68,14 @@ public class Tree
         }
     }
 
+    /*
     public String toString() // retourne le parcours en largeur de l'arbre (hauteur 0 sur la première ligne, puis hauteur 1 sur la deuxième ect...)
     {
         //aucune idée de comment faire
         String str = "";
         return str;
     }
+     */
 
 
 }

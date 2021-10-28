@@ -12,21 +12,29 @@ public class main
         test.addNode(5, 8, test.root);
         test.addNode(5, 9, test.root);
 
-
+        //Noeuds de hauteur 0
         System.out.println(test.root.value);
 
+//Noeuds de hauteur 1
         System.out.print(test.root.next.node.value);
         System.out.print(" " + test.root.next.next.node.value);
         System.out.println(" " + test.root.next.next.next.node.value);
 
+//Noeuds de hauteur 2
         System.out.print(test.root.next.node.next.node.value);
         System.out.print(" " + test.root.next.next.node.next.node.value);
-
         System.out.println(" " + test.root.next.next.next.node.next.node.value);
 
+//Noeuds de hauteur 3
         System.out.print(test.root.next.node.next.node.next.node.value);
         System.out.print(" " + test.root.next.node.next.node.next.next.node.value);
+        /*
+        Tree bin = new Tree();
+        Binary_Tree testB = new Binary_Tree();
+        testB.treeToBinTree(test, bin);
+        System.out.println("kk");
 
+         */
 
     }
 }

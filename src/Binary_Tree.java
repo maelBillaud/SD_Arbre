@@ -28,7 +28,7 @@ public class Binary_Tree extends Tree {
         return X.root;
     }
 
-    public void treeToBinTree (Tree T, Tree U) //Stocke la transformation binaire de T dans U
+    public void treeToBinTree (Tree T, Tree U) //Stocke la transformation binaire de T dans U.
     {
         Node X = T.root;
         Node Y = U.root;

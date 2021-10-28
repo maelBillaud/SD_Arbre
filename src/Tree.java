@@ -28,9 +28,9 @@ public class Tree
     }
 
     //Methods
-    public void addRoot(int value) //Ajoute une valeur à la racine de arbre (/!\ écrase la valeur précédante si il y en à une)
+    public void addRoot(Node node) //Ajoute un noeud à la racine de arbre (/!\ écrase la valeur précédante si il y en à une)
     {
-        this.root = new Node(value, null);
+        this.root = node;
     }
 
     public void addNode(int father, int value, Node node) //Ajoute un noeud de valeur value comme un fils du noeud qui à pour valeur father ///Faire l'appel dans main avec node = root///
@@ -64,6 +64,44 @@ public class Tree
                     tempB = tempB.next;
                 }
                 addNode(father, value, tempB.node);
+            }
+        }
+    }
+
+    public boolean emptyTree()
+    {
+        return this.root == null;
+    }
+    //Retourne une copie d'un noeud venant d'un arbre n-aire (tous les pointeurs ont été changés)
+    //Différent d'une copie venant d'un BinaryTree car leurs feuilles pointent vers 2 branches dont le .node est null. (Alors que les feuilles d'un Tree pointent vers null directement)
+    public static Node copyNodeFromtree(Node node)
+    {
+        if(node == null)
+        {
+            return null;
+        }
+        else
+        {
+            if (node.next == null)
+            {
+                return new Node(node.value, null);
+            }
+            else
+            {
+                Branch oldBranch = node.next;
+                Branch newBranch;//Nouvelle branche sur laquelle va pointer le noeud copié
+                Branch temp;
+
+                newBranch = new Branch(oldBranch.node);
+                copyNodeFromtree(oldBranch.node);
+                temp = newBranch;
+                do
+                {
+                    oldBranch = oldBranch.next;
+                    temp.next = new Branch(oldBranch.node);
+                    copyNodeFromtree(oldBranch.node);
+                } while (oldBranch.next != null);
+                return new Node(node.value, newBranch);
             }
         }
     }

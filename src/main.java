@@ -2,6 +2,7 @@ public class main
 {
     public static void main (String[] args)
     {
+
         Tree test = new Tree(1);
         test.addNode(1, 2, test.root);
         test.addNode(1, 3, test.root);
@@ -12,29 +13,30 @@ public class main
         test.addNode(5, 8, test.root);
         test.addNode(5, 9, test.root);
 
-        //Noeuds de hauteur 0
-        System.out.println(test.root.value);
+        //Test copie d'un noeud == null
+        Tree test1 = new Tree(1);
+        System.out.print(test1.root);
+        System.out.println(" " + test1.root.value);
+        //Test copie d'une feuille
+        System.out.print(Tree.copyNodeFromtree(test1.root));
+        System.out.println(" " + Tree.copyNodeFromtree(test1.root).value);
+        //Test copie arbre entier
+        Tree copied = new Tree();
+        copied.addRoot(Tree.copyNodeFromtree(test.root));
 
-//Noeuds de hauteur 1
-        System.out.print(test.root.next.node.value);
-        System.out.print(" " + test.root.next.next.node.value);
-        System.out.println(" " + test.root.next.next.next.node.value);
 
-//Noeuds de hauteur 2
-        System.out.print(test.root.next.node.next.node.value);
-        System.out.print(" " + test.root.next.next.node.next.node.value);
-        System.out.println(" " + test.root.next.next.next.node.next.node.value);
 
-//Noeuds de hauteur 3
-        System.out.print(test.root.next.node.next.node.next.node.value);
-        System.out.print(" " + test.root.next.node.next.node.next.next.node.value);
+
+
+
+
         /*
-        Tree bin = new Tree();
         Binary_Tree testB = new Binary_Tree();
-        testB.treeToBinTree(test, bin);
+        testB.treeToBinaryTree(test);
         System.out.println("kk");
 
          */
+
 
     }
 }

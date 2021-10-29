@@ -93,13 +93,18 @@ public class Tree
                 Branch temp;
 
                 newBranch = new Branch(oldBranch.node);
+                System.out.println("ok1");
                 copyNodeFromtree(oldBranch.node);
+                System.out.println("ok2");
                 temp = newBranch;
                 do
                 {
                     oldBranch = oldBranch.next;
+                    System.out.println("ok3");
                     temp.next = new Branch(oldBranch.node);
+                    System.out.println("ok4");
                     copyNodeFromtree(oldBranch.node);
+                    System.out.println("ok5");
                 } while (oldBranch.next != null);
                 return new Node(node.value, newBranch);
             }

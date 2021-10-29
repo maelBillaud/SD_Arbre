@@ -14,12 +14,15 @@ public class main
         test.addNode(5, 9, test.root);
 
         //Test copie d'un noeud == null
-        Tree test1 = new Tree(1);
+        Tree test1 = new Tree();
         System.out.print(test1.root);
-        System.out.println(" " + test1.root.value);
+        System.out.println(" " + Tree.copyNodeFromtree(test1.root));
         //Test copie d'une feuille
-        System.out.print(Tree.copyNodeFromtree(test1.root));
-        System.out.println(" " + Tree.copyNodeFromtree(test1.root).value);
+        Tree test2 = new Tree(1);
+        System.out.print(test2.root.value);
+        System.out.print(" " + test2.root.next);
+        System.out.print(" " + Tree.copyNodeFromtree(test2.root).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test2.root).next);
         //Test copie arbre entier
         Tree copied = new Tree();
         copied.addRoot(Tree.copyNodeFromtree(test.root));

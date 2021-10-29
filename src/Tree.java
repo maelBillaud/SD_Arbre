@@ -68,7 +68,7 @@ public class Tree
         }
     }
 
-    public boolean emptyTree()
+    public boolean emptyTree() //retourne vrai si l'arbre est vide, faux sinon
     {
         return this.root == null;
     }
@@ -107,14 +107,8 @@ public class Tree
         }
     }
 
-    /*
-    public String toString() // retourne le parcours en largeur de l'arbre (hauteur 0 sur la première ligne, puis hauteur 1 sur la deuxième ect...)
+    public void displayTree(Tree T)
     {
-        //aucune idée de comment faire
-        String str = "";
-        return str;
+        if ()
     }
-     */
-
-
 }

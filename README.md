@@ -25,10 +25,12 @@ Lorsqu'on met à la suite des **Node** et des **Branch**, on obtient un arbre. L
 
 ![Source : Arbres binaires Irena Rusu](Representation_arbre_n-aire.png "Exemple d'arbre n-aire et de sa représentation sous forme de chainage")
 
-Nous n'avons implémenté que deux méthodes :
+#### Méthodes implémentées : 
 
-_addRoot_ : Permet d'ajouter une valeur au niveau de la racine (sert à initialiser un arbre vide)
-_addNode_ : Permet d'ajouter un noeud dans l'arbre en fonction de son père 
+* _addRoot_(Node n) : Permet d'ajouter un noeud au niveau de la racine (sert à initialiser un arbre vide)
+* _addNode_(Entier father, Entier value, Node n) : Permet d'ajouter un noeud dans l'arbre en fonction de son père (Commence à charcher dans l'abre à partir du noeud n)
+* _emptyTree_() : Retourne vrai si l'arbre est vide
+* _copyNodeFromtree_(Node n) : Retourne la copie de n mais ses pointeurs (ainsi que ceux des Branch et Node qui en découlent) ont été changés 
 
 En effet, faire une fonction pour afficher l'arbre était trop chronophage et peu utile car nous n'utiliserons plus d'arbre n-aires par la suite.
 Cependant, nous avons fait un test dans le main en manipulant la fonction _addNode_ et le chainage directement pour s'assurer que notre classe était fonctionnelle.

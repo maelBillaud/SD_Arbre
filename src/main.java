@@ -23,23 +23,60 @@ public class main
         System.out.print(" " + test2.root.next);
         System.out.print(" " + Tree.copyNodeFromtree(test2.root).value);
         System.out.println(" " + Tree.copyNodeFromtree(test2.root).next);
+
         //Test copie arbre entier
         Tree copied = new Tree();
         copied.addRoot(Tree.copyNodeFromtree(test.root));
 
+        System.out.println("\n  Arbre original  |   Arbre copié\n");
 
+        System.out.println("\nHauteur 0");
+        System.out.print(test.root.value);
+        System.out.print(" " + test.root.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root).next);
 
+        System.out.println("\nHauteur 1");
+        System.out.print(test.root.next.node.value);
+        System.out.print(" " + test.root.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.node).next);
 
+        System.out.print(test.root.next.next.node.value);
+        System.out.print(" " + test.root.next.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.next.node).next);
 
+        System.out.print(test.root.next.next.next.node.value);
+        System.out.print(" " + test.root.next.next.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.next.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.next.next.node).next);
 
+        System.out.println("\nHauteur 2");
+        System.out.print(test.root.next.node.next.node.value);
+        System.out.print(" " + test.root.next.node.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.node.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.node.next.node).next);
 
-        /*
-        Binary_Tree testB = new Binary_Tree();
-        testB.treeToBinaryTree(test);
-        System.out.println("kk");
+        System.out.print(test.root.next.next.node.next.node.value);
+        System.out.print(" " + test.root.next.next.node.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.next.node.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.next.node.next.node).next);
 
-         */
+        System.out.print(test.root.next.next.next.node.next.node.value);
+        System.out.print(" " + test.root.next.next.next.node.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.next.next.node.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.next.next.node.next.node).next);
 
+        System.out.println("\nHauteur 3");
+        System.out.print(test.root.next.node.next.node.next.node.value);
+        System.out.print(" " + test.root.next.node.next.node.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.node.next.node.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.node.next.node.next.node).next);
 
+        System.out.print(test.root.next.node.next.node.next.next.node.value);
+        System.out.print(" " + test.root.next.node.next.node.next.next.node.next);
+        System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.node.next.node.next.next.node).value);
+        System.out.println(" " + Tree.copyNodeFromtree(test.root.next.node.next.node.next.next.node).next);
     }
 }

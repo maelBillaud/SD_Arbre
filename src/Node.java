@@ -14,7 +14,7 @@ public class Node
     public Node(int value)
     {
         this.value = value;
-        this.next = null;
+        this.next = new Branch(null, new Branch(null, null));
     }
 
     public Node() {}

@@ -78,4 +78,3 @@ Tree test = new Tree(1);
         System.out.print(" | " + Tree.copyNodeFromtree(test.root.next.node.next.node.next.next.node).value);
         System.out.println(" " + Tree.copyNodeFromtree(test.root.next.node.next.node.next.next.node).next);
 
-        

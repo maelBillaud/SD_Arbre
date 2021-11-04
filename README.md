@@ -32,38 +32,7 @@ Lorsqu'on met à la suite des **Node** et des **Branch**, on obtient un arbre. L
 * _emptyTree_() : Retourne vrai si l'arbre est vide
 * _copyNodeFromtree_(Node n) : Retourne la copie de n mais ses pointeurs (ainsi que ceux des Branch et Node qui en découlent) ont été changés 
 
-En effet, faire une fonction pour afficher l'arbre était trop chronophage et peu utile car nous n'utiliserons plus d'arbre n-aires par la suite.
-Cependant, nous avons fait un test dans le main en manipulant la fonction _addNode_ et le chainage directement pour s'assurer que notre classe était fonctionnelle.
-
-```
-//Création de l'arbre vu dans l'exemple ci-dessus
-Tree test = new Tree(1);
-test.addNode(1, 2, test.root);
-test.addNode(1, 3, test.root);
-test.addNode(1, 4, test.root);
-test.addNode(2, 5, test.root);
-test.addNode(3, 6, test.root);
-test.addNode(4, 7, test.root);
-test.addNode(5, 8, test.root);
-test.addNode(5, 9, test.root);
-
-//Noeuds de hauteur 0 
-System.out.println(test.root.value);
-
-//Noeuds de hauteur 1
-System.out.print(test.root.next.node.value);
-System.out.print(" " + test.root.next.next.node.value);
-System.out.println(" " + test.root.next.next.next.node.value);
-
-//Noeuds de hauteur 2
-System.out.print(test.root.next.node.next.node.value);
-System.out.print(" " + test.root.next.next.node.next.node.value);
-System.out.println(" " + test.root.next.next.next.node.next.node.value);
-
-//Noeuds de hauteur 3
-System.out.print(test.root.next.node.next.node.next.node.value);
-System.out.print(" " + test.root.next.node.next.node.next.next.node.value);
-```
+Comme nous allons principalement travailler sur les arbres binaires, kd-arbres et quadtree, nous n'avons pas implémenté de méthode d'affichage pour les arbres n-aires.
 
 ## Classe Binary_Tree
 

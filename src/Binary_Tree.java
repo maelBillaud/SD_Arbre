@@ -1,6 +1,8 @@
+import javax.naming.BinaryRefAddr;
+
 /**
  * Definition Arbre binaire:
- *       Tout noeud de l árbre binaire possède deux sous-arbres (vides ou non)
+ *       Tout noeud de l'arbre binaire possède deux sous-arbres (vides ou non)
  *
  * Un arbre binaire complet est un arbre binaire où tous les noeud internes possèdent 2 enfants
  **/
@@ -23,13 +25,25 @@ public class Binary_Tree extends Tree {
     }
 
     //Méthodes
-    public static void treeToBinTree (Tree T, Tree U) //Stocke la transformation binaire de T dans U.
+
+    public void treeToBinaryTree(Tree T)
+    {
+        Binary_Tree U = new Binary_Tree();
+        if (!T.emptyTree())
+        {
+            U.root = copyNodeFromtree(T.root);
+            treeToBinTree(T, U);
+        }
+        this.root = U.root;
+    }
+
+    public static void treeToBinTree (Tree T, Binary_Tree U) //Stocke la transformation binaire de T dans U.
     {
         Node X = T.root;
         Node Y = U.root;
         if (X.next != null)
         {
-            Tree last = new Tree();
+            Binary_Tree last = new Binary_Tree();
             Branch W = X.next;
             while(W.next != null)
             {
@@ -40,31 +54,18 @@ public class Binary_Tree extends Tree {
         }
     }
 
-    private static void courseTreeSons(Node Y, Tree last, Branch W) // --Permet d'éviter les répétitions dans le code-- Tri tous les fils du noeud Y pour les mettre sous forme binaire puis fait un appel recursif sur treeToBinTree
+    private static void courseTreeSons(Node Y, Binary_Tree last, Branch W) // --Permet d'éviter les répétitions dans le code-- Tri tous les fils du noeud Y pour les mettre sous forme binaire puis fait un appel recursif sur treeToBinTree
     {
         if (last.emptyTree())
         {
-            Y.left(W.node);
+            Y.left(copyNodeFromtree(W.node));
             last.root = Y.left();
         }
         else
         {
-            last.root.right(W.node);
+            last.root.right(copyNodeFromtree(W.node));
             last.root = last.root.right();
         }
         treeToBinTree(new Tree(W.node), last);
     }
-
-    public void treeToBinaryTree(Tree T)
-    {
-        Tree U = new Tree();
-        if (!T.emptyTree())
-        {
-            U.root = T.root;
-            treeToBinTree(T, U);
-        }
-        this.root = U.root;
-    }
-
-
 }

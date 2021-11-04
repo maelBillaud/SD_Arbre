@@ -72,6 +72,7 @@ public class Tree
     {
         return this.root == null;
     }
+
     //Retourne une copie d'un noeud venant d'un arbre n-aire (tous les pointeurs ont été changés)
     //Différent d'une copie venant d'un BinaryTree car leurs feuilles pointent vers 2 branches dont le .node est null. (Alors que les feuilles d'un Tree pointent vers null directement)
     public static Node copyNodeFromtree(Node node)
@@ -105,10 +106,5 @@ public class Tree
                 return new Node(node.value, newBranch);
             }
         }
-    }
-
-    public void displayTree(Tree T)
-    {
-        //if ()
     }
 }

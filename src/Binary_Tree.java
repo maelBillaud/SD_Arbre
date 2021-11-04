@@ -26,6 +26,66 @@ public class Binary_Tree extends Tree {
 
     //Méthodes
 
+    //###### Méthodes de bases vues en cours ######//
+
+    public static Binary_Tree G(Binary_Tree B) //Retourne le sous arbre gauche de la racine de B
+    {
+        return new Binary_Tree(B.root.left());
+    }
+
+    public static Binary_Tree D(Binary_Tree B) //Retourne le sous arbre droit de la racine de B
+    {
+        return new Binary_Tree(B.root.right());
+    }
+
+    public static Binary_Tree Cons(Node node, Binary_Tree G, Binary_Tree D) //Étant donné un nœud et deux arbres, crée l’arbre binaire ayant comme racine ce nœud, et comme sous-arbres de la racine le premier arbre à Gauche et le deuxième arbre à Droite
+    {
+        if(node.next == null)
+        {
+            node = new Node(node.value);
+        }
+        else
+        {
+            if(node.next.next == null)
+            {
+                node = new Node(node.value);
+            }
+        }
+        node.left(G.root);
+        node.right(D.root);
+        node.next.next.next = null; // On s'assure que node n'a pas de troisième fils
+
+        return new Binary_Tree(node);
+    }
+
+    public static Node Elt(Binary_Tree B)
+    {
+        return B.root;
+    }
+
+    //##########################################//
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ///////////// Essaie non concluant de la fonction de transformation d'un arbre n-aire en arbre binaire /////////////
+    /*
     public void treeToBinaryTree(Tree T)
     {
         Binary_Tree U = new Binary_Tree();
@@ -68,4 +128,5 @@ public class Binary_Tree extends Tree {
         }
         treeToBinTree(new Tree(W.node), last);
     }
+    */
 }
